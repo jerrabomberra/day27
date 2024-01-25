@@ -3,6 +3,7 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Welcome")
 
+
 root.geometry("600x400")
 
 menu = tk.Menu(root)
