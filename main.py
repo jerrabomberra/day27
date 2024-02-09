@@ -1,30 +1,30 @@
-import tkinter
+from tkinter import *
 
-window = tkinter.Tk()
+window = Tk()
 window.title("My first GUI")
 window.minsize(width=600, height=400)
 
-my_label = tkinter.Label(text="I am a Label", font=("Arial", 24, "bold"))
+#label
+
+my_label = Label(font=("Arial", 24, "bold"))
 my_label.pack()
+my_label["text"] = "New text"
 
 
-menu = tkinter.Menu(window)
-item = tkinter.Menu(menu)
-item.add_command(label="New")
-item.add_command(label="Exit")
-menu.add_cascade(label="File", menu=item)
-window.config(menu=menu)
+# button
+def button_clicked():
+    print("I got clicked")
+    my_label.config(text=input.get())
+    
 
+button = Button(text="click me", command= button_clicked)
+button.pack()
 
-# def clicked():
-#     res = f"You wrote {txt.get()}"
-#     my_label.configure(text=res)
+# entry
+input = Entry(width = 10)
+input.pack()
+input.get()
 
-
-# # button widget with red color text inside
-# my_button = tkinter.Button(window, text="Click me", fg="red", command=clicked)
-# # Set Button Grid
-# my_button.pack()
 
 
 window.mainloop()
