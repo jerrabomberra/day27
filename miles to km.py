@@ -8,9 +8,9 @@ window.config(padx=10, pady=10)
 
 
 def button_clicked():
-    new_text = input.get()
-    km = int(new_text) * 1.609
-    km_result_label.config(text=km)
+    new_text = float(input.get())
+    km = new_text * 1.609
+    km_result_label.config(text=f"{km}")
 
 
 # Label
