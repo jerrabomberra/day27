@@ -22,8 +22,8 @@ button = Button(text="click me", command= button_clicked)
 button.pack()
 
 # entry
-input = Entry(width = 10)
-input.pack()
+input = Entry(width = 10, font=("Arial", 24, "bold"))
+input.pack(padx=10, pady=10)
 input.get()
 
 
